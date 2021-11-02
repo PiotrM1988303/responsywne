@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona główna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- czcionki -->
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/7e11ade725.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="wrapper">
+            <button class="burger-icon"> <i class="fas fa-bars"></i></button>
+            <div class="nav-items">
+                <a href="#">Home</a>
+                <!-- # przenosi na góre -->
+                <a href="#onas"> Informacje o nas</a>
+                <!-- #nazwa przenosi do elementu strony -->
+                <a href="#produkt"> Produkty</a>
+                <a href="#kontakt"> Kontakt</a>
+            </div>
+            <!-- inny sposób tworzenia nawigacji -->
+        </div>
+        <!-- moblina nawigacja -->
+
+        <div class="mobile-nav-items"><a href=""></a>
+            <a href="#" class="mobile-nav-item"> Home</a>
+            <!-- # przenosi na góre -->
+            <a href="#onas" class="mobile-nav-item"> Kilka słów o nas</a>
+            <!-- #nazwa przenosi do elementu strony -->
+            <a href="#produkt" class="mobile-nav-item"> Produkty</a>
+            <a href="#kontakt" class="mobile-nav-item"> Kontakt</a>
+        </div>
+
+
+
+
+    </nav>
+    <header class="header">
+        <div class="hero-bg"></div>
+        <div class="hero-text">
+            <h1>Trala<span>lala</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque labore amet delectus. Magnam tenetur
+                sadadsasdas nobis impedit sint quasi? Ducimus at vitae suscipit velit ab, illo dolorem alias non iure
+                ullam.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="website-info wrapper" id="onas">
+            <h2 class="section-title">O stronie</h2>
+            <p class="about-website">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni nihil, doloribus
+                nemo placeat error, deserunt soluta cupiditate illum sint, quas amet autem sit minus minima quisquam
+                animi corporis incidunt sunt.
+            </p>
+            <p class="about-goals">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, sapiente autem qui
+                doloremque, corporis a adipisci accusamus magni illum ex fugit culpa dolore iusto minima nisi aliquid
+                ea, quod officia.</p>
+        </section>
+
+
+        <section class="products wrapper" id="produkt">
+            <h2 class="section-title">Produkty</h2>
+
+            <div class="products-box">
+                <div class="product first-product">
+                    <div class="hero-bg"></div>
+                    <div class="hero-text">
+                        <h3>O NAS</h3>
+
+                    </div>
+                </div>
+                <div class="product second-product">
+                    <div class="hero-bg"></div>
+                    <div class="hero-text">
+                        <h3>WPŁYW JEDZENIA NA ZDROWIE</h3>
+
+                    </div>
+                </div>
+                <div class="product third-product">
+                    <div class="hero-bg"></div>
+                    <div class="hero-text">
+                        <h3>PRODUKTY</h3>
+
+                    </div>
+                </div>
+                <div class="product fourth-product">
+                    <div class="hero-bg"></div>
+                    <div class="hero-text">
+                        <h3>KONTAKT</h3>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact wrapper" id="kontakt">
+            <h2 class="section-title">KONTAKT</h2>
+            <p><i class="fas fa-phone">3213213</i></p>
+            <p><i class="fas fa-at">dsadas3213.@wp.pl</i></p>
+            <h3>Adres</h3>
+            <p>ul. Ogór</p>
+            <p>Kod pocztowy 24-421</p>
+            <p>Wieś</p>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+        <p> &copy; sdadassdasd</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

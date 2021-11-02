@@ -1,0 +1,290 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* mobilna nawigacja, swoimi rozmiarami ma obejmować 100%  obszaru roboczeog */
+.mobile-nav-items{
+position: fixed;
+/* coś nie działa tak jak chciałbym tzn. wciąż jest pasek przewijania, a powinien zniknąc */
+top: 0;
+width: 100%;
+height: 100vh;
+/* korzystam z flexboxa */
+display: flex;
+align-items:center;
+justify-content: center;
+flex-direction: column;
+/* chowamy nawigacje poprzez transform translate x o 100% */
+transform: translateX(100%);
+/* ponieważ animuje to na obiekt animowany nakładam transitio */
+transition:  0.5s linear;
+/* stała prędkość w .05s */
+background-color: #50c878;
+
+
+}
+
+.mobile-nav-items .mobile-nav-item {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-bottom: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
+/* transform będzie wracał na pozycje w nowej klasie która będzie tworzona na podstawie javascript*/
+.active {
+    transform: translateX(0);
+}
+
+nav{
+    /* lepiej stsować flexboxa zamiat podawać wysoikość, a jeżeli wnawigacji mam koniecznie stosować hight to lepiej bawić si ę paddingami */
+    height: 60px;
+    line-height: 60px;
+    /* wyśrodkowanie na osi y */
+    text-align: center;
+    /* wyśrodkowanie w osi z */
+background-color: #333;
+position: sticky;
+top: 0;
+z-index: 10;
+/* 3 ostatnie wartości są niezbędne by nie wyjmować eleemntu z html , a żeby był zawsze na samej gorze */
+}
+
+.wrapper{
+    /* środkowanie */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    /* max szerkość 1200px */
+}
+
+
+/* marginesy nie da się ustawiać na obiekty liniowe stąd button zamieniamy na blokowy */
+
+.burger-icon{
+    display: block;
+    margin-left: auto;
+    padding: 0 30px;
+    /* znając wysokość rodzica możemy zastosować wyśrodkowanie w y za pomoca line hight równego line hightrodzica */
+    line-height: 60px;
+    /* zwiększamy zakres klikalny przycisku */
+    background: none;
+    cursor: pointer;
+    border: none;
+    color: #5D8233;
+    /* wyłączamy obramowanie i domyślny kolor przycisku */
+}
+/* mają by c widoczne od pewengo breakpointu */
+.nav-items{
+    display: none;
+}
+.nav-items a:hover{
+color: #5D8233;
+}
+
+
+.header{
+    position: relative;
+    /* pozycjonowanie względem rodzica */
+    background-image: url("./img/small/kiwi-6718889_640.jpg");
+    /* domyślnie obraz jest r ówny zawartości dlaczego poowiększamy rozmiar
+     */
+     height: 330px;
+     background-size: cover;
+     background-position: center;
+}
+
+.hero-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.74;
+    
+    /* nałożyłem poniekąd folie na rodzica, by teskt mógł być zaznaczany,a a wtym samym wyciągnięty nad folie to korzystamy z z indexu  */
+}
+.hero-text{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* środukemy kontyner na podstawie 4 pierwszych wartośći */
+}
+.hero-text h1{
+    margin-bottom: 5px;
+    /* odsunięcie 5px od p */
+    text-shadow: 3px 3px 5px black;
+    /* z 3 y 3 rozmycie 5 kolor czarny */
+    color: #ddd;
+}
+
+/*  */
+.hero-text span{
+    text-transform: uppercase;
+    color: #5D8233;
+}
+
+/* nie nadużywam media queries, w razie jakich perturbacji przy szerokości 480 px odwołąłbym się doi nich */
+main{
+    margin: 80px 0;
+    /* odsunięcia main od header i footer */
+}
+
+.section-title{text-align: center;
+text-transform: uppercase;
+margin-bottom: 20px;
+/* odsuwamy h od paragrafów */
+/* ponieważ main ma klase wrapper , która została wcześniej zdefiniowanana, to tekst wyśrodkowany */
+}
+
+/* odsuwamy paragrafu względem siebie */
+.about-goals, .about-website{
+    margin-top: 10px;
+    padding: 0 20px;
+    /* odsunięcie tekstuod krawędzi */
+}
+
+
+.products{
+    margin: 60px auto;
+}
+
+
+.first-product{
+    position: relative;
+    height: 300px;
+    background-image: url("./img/small/greenhouse-6226263_640.jpg");
+    background-size: cover;
+    background-position:center;
+}
+
+.second-product{
+    position: relative;
+    height: 300px;
+    background-image: url("./img/small/raspberry-3533909_640.jpg");
+    background-size: cover;
+    background-position:center;
+}
+.third-product{
+    position: relative;
+    height: 300px;
+    background-image: url("./img/small/raspberries-422979_640.jpg");
+    background-size: cover;
+    background-position:center;
+}
+
+.fourth-product{
+    position: relative;
+    height: 300px;
+    background-image: url("./img/small/phone-1610203_640.jpg");
+    background-size: cover;
+    background-position:center;
+}
+
+
+.contact{text-align: center;}
+/* środkujemy kontakt */
+
+.contact h3{
+    text-transform: uppercase;
+    margin: 20px 0 5px;
+    /* odsuwamy margines */
+}
+
+footer{
+    text-align: center;
+    padding: 30px 10px;
+}
+
+
+.product:hover h3{
+    transform: scale(1.6);
+    /* po najechaniu na div product ma wrastać nagłówek */
+}
+
+.product h3{
+    transition: transform .3s;
+    /* nakładamy transition */
+}
+
+
+
+/* USTAWIENIA MOBLLNE */
+/* domyślny rozmiar dla średnich urządzeń(tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    /* wyłaczona nawigacja mobilna */
+    .mobile-nav-items{display: none;}
+    .burger-icon{
+        display: none;
+    }
+    /* chowamy burger i pokazujemy blokowe */
+    .nav-items{
+        display: block;
+    }
+    .nav-items a{
+        padding: 0 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        transition: color .3s;
+        }
+    /* nalożony transition na element zmieniany */
+
+
+
+    /* w hederze zmienimy rozdzielczość obrazu i zwiększymy wielkość containera */
+
+
+    .header{
+        background-image: url("./img/big/kiwi-6718889_1920.jpg");
+        /* domyślnie obraz jest r ówny zawartości dlaczego poowiększamy rozmiar
+         */
+         height: 400px;
+}
+.first-product{
+        
+    background-image: url("./img/big/greenhouse-6226263_1920\ \(1\).jpg");
+}
+.second-product{
+    
+    background-image: url("./img/big/raspberry-3533909_1920.jpg");
+}
+.third-product{background-image: url("./img/big/raspberries-422979_1920.jpg");
+}
+.fourth-product{background-image: url("./img/big/phone-1610203_1920.jpg");}
+
+
+}
+
+@media (min-width: 992px){
+    .products-box{font-size: 0;}
+.product{
+    display: inline-block;
+    font-size: 16px;
+    width: 50%;
+    /* by elementy ukłądały siebie jest konieczne zastosowanie sztuczki niwelującej bład html. DLa stworzonego rodzica products-box zostanie nałożona font size 0 z kolei na dziecko font size 16 co pozwoli ustalić szerokość 50% i zniwelować odstęp między pojemnikami */
+
+    /* wykorzystanie inlie block spowodowało, że elementom blokowym zostało zabarana szerokość co wywaliło je przy rozdzielczości 992px */
+}
+}
+
+@media (min-width: 1200px) {
+    .hero-text h1{
+        font-size: 42px;
+    }
+    .hero-text p{font-size: 20px;}
+}
